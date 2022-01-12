@@ -8,6 +8,118 @@ namespace FPlaboratorB
 {
     class Program
     {
+
+
+        static void p1()
+        {
+            //Sa se scrie un program care converteste temperatura din grade celsius in grade fahrenheit si
+            //invers utilizand instructiunea switch.
+
+            string input;
+;
+            Console.WriteLine("1- *F in *C");
+            Console.WriteLine("2- *C in *F");
+            input = Console.ReadLine();
+
+            switch(input)
+            {
+                case "1":
+                    Console.WriteLine("Introduceti valoarea in *F pe care doriti sa o transformati in *C");
+                    double F, C;
+                    F = double.Parse(Console.ReadLine());
+                    C = (F - 32) / 1.8;
+                    Console.WriteLine("{0} *F= {1} *C", F, C);
+                    break;
+
+                case "2":
+                    Console.WriteLine("Introduceti valoarea in *C pe care doriti sa o transformati in *F");
+                   
+                    C = double.Parse(Console.ReadLine());
+                    F = C * 1.8 + 32;
+                    Console.WriteLine("{0} *F= {1} *C", F, C);
+                    break;
+
+                    
+
+            }
+            Console.ReadLine();
+
+
+
+
+
+        }
+        static void p2()
+        /*Să se scrie un program care efectuează mai multe operații la cererea utilizatorului, adică:
+        adunare, scădere, înmulțire, împărțire, radical, modulul. (Ulilizați operatorul switch pentru
+        selectarea funcției calculatorului.). După selectarea opțiunii dorite, programul trebuie să
+        ceară utilizatorului introducerea datelor necesare, respectiv, în cazul adunării, scăderii,
+         înmulțirii și împărțirii, două numere, iar în cazul radicalului și modulului, un singur număr.*/
+        
+        {
+            string input;
+            ;
+            Console.WriteLine("1- pentru adunare");
+            Console.WriteLine("2- pentru scadere");
+            Console.WriteLine("3- pentru inmultire");
+            Console.WriteLine("4- pentru impartire");
+            Console.WriteLine("5- pentru radical");
+            Console.WriteLine("6- pentru modul");
+            input = Console.ReadLine();
+
+            switch (input)
+            {
+                case "1":
+                    Console.Write("Introduceti valorile pentru adunare");
+                    double x, y, r;
+                    x = double.Parse(Console.ReadLine());
+                    y = double.Parse(Console.ReadLine());
+                    r = x + y;
+                    Console.Write("{0}+{1}={2}", x, y,r);
+                    break;
+
+                case "2":
+                    Console.Write("Introduceti valorile pentru scadere");
+                    
+                    x = double.Parse(Console.ReadLine());
+                    y = double.Parse(Console.ReadLine());
+                    r = x - y;
+                    Console.Write("{0}-{1}={2}", x, y, r);
+                    break;
+                case "3":
+                    Console.Write("Introduceti valorile pentru adunare");
+                    x = double.Parse(Console.ReadLine());
+                    y = double.Parse(Console.ReadLine());
+                    r = x * y;
+                    Console.WriteLine("{0}*{1}={2}", x, y, r);
+                    break;
+                case "4":
+                    Console.Write("Introduceti valorile pentru adunare");
+                    x = double.Parse(Console.ReadLine());
+                    y = double.Parse(Console.ReadLine());
+                    r = x /y;
+                    Console.WriteLine("{0}/{1}={2}", x, y, r);
+                    break;
+                case "5":
+                    Console.WriteLine("Introduceti valoarea: ");
+                    x = double.Parse(Console.ReadLine());
+                    r = Math.Sqrt(x);
+                    Console.WriteLine("Radical din {0} este {1}",x,r);
+                    break;
+                case "6":
+                    Console.WriteLine("Introduceti valoarea: ");
+                    x = double.Parse(Console.ReadLine());
+                    r = Math.Abs(x);
+                    Console.WriteLine("Modul din {0} este {1}", x, r);
+                    break;
+                default:
+                    Console.WriteLine("Ati introdus o valoare gresita");
+                    break;
+            }
+            Console.ReadLine();
+
+        }
+
         static void p3()
         {
             // Problema nr 3 : Fie i,j,k. Să se determine restul împărţirii numărului natural ij la k
@@ -130,7 +242,8 @@ namespace FPlaboratorB
         {
 
 
-
+            //p1();
+            //p2();
             //p3();
             //p4();
             //p5();
